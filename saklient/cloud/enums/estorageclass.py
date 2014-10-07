@@ -4,7 +4,7 @@ from ...util import Util
 
 # module saklient.cloud.enums.estorageclass
 
-class EStorageClass:
+class EStorageClass(object):
     ## ストレージのクラスを表す列挙子。
     
     ISCSI1204 = "iscsi1204"

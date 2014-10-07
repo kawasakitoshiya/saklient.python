@@ -5,7 +5,7 @@ from .errors.saklientexception import SaklientException
 
 # module saklient.util
 
-class Util:
+class Util(object):
     
     ## @ignore
     @staticmethod

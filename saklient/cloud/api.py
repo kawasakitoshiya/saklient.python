@@ -17,7 +17,7 @@ from .models.model_script import Model_Script
 
 # module saklient.cloud.api
 
-class API:
+class API(object):
     ## さくらのクラウドAPIクライアントを利用する際、最初にアクセスすべきルートとなるクラス。
     # 
     # @see API.authorize

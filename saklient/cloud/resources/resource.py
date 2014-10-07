@@ -7,7 +7,7 @@ import re
 
 # module saklient.cloud.resources.resource
 
-class Resource:
+class Resource(object):
     ## @ignore
     
     # (instance field) _client

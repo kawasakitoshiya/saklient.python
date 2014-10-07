@@ -8,7 +8,7 @@ from ..util import Util
 
 # module saklient.cloud.product
 
-class Product:
+class Product(object):
     ## 商品情報にアクセスするためのモデルを集めたクラス。
     
     # (instance field) _server

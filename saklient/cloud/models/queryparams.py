@@ -4,7 +4,7 @@ from ...util import Util
 
 # module saklient.cloud.models.queryparams
 
-class QueryParams:
+class QueryParams(object):
     ## @ignore
     
     # (instance field) begin

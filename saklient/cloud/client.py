@@ -5,7 +5,7 @@ from urllib.error import URLError, HTTPError
 import json, re, base64
 from ..errors.exceptionfactory import ExceptionFactory
 
-class Client:
+class Client(object):
     
     def __init__(self, token, secret):
         self.config = {
