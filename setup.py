@@ -16,6 +16,9 @@ setup(
         'saklient.cloud.resources',
         'saklient.errors'
     ],
+    install_requires=[
+        'python-dateutil'
+    ],
     classifiers = [
         'Programming Language :: Python :: 3',
         'Development Status :: 4 - Beta',

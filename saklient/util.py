@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import datetime, re, types, time, urllib.parse
+import dateutil.parser
 from .errors.saklientexception import SaklientException
 
 # module saklient.util
@@ -68,7 +69,7 @@ class Util(object):
     def str2date(s):
         if s is None:
             return None
-        return datetime.datetime.strptime(re.sub(r"([+-][0-9]{2}):([0-9]{2})$", "\\1\\2", s), "%Y-%m-%dT%H:%M:%S%z")
+        return dateutil.parser.parse(s)
     
     ## @ignore
     @staticmethod
