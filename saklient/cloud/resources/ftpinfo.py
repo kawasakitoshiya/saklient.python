@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 from ...util import Util
 
 # module saklient.cloud.resources.ftpinfo
@@ -40,4 +42,3 @@ class FtpInfo(object):
         self._host_name = (obj["HostName"] if "HostName" in obj else None)
         self._user = (obj["User"] if "User" in obj else None)
         self._password = (obj["Password"] if "Password" in obj else None)
-    

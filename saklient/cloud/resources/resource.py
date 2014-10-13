@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 from ...util import Util
 from ..client import Client
 from ...errors.httpexception import HttpException
@@ -261,4 +263,3 @@ class Resource(object):
         if retryCount == 0:
             ret = self._client.request(method, path, query)
         return ret
-    

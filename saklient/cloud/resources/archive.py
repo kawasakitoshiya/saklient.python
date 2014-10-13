@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 from ..client import Client
 from .resource import Resource
 from .icon import Icon
@@ -536,4 +538,3 @@ class Archive(Resource):
         if len(missing) > 0:
             raise SaklientException("required_field", "Required fields must be set before the Archive creation: " + ", ".join(missing))
         return ret
-    

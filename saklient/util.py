@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 import datetime, re, types, time, urllib.parse
 import dateutil.parser
 from .errors.saklientexception import SaklientException
@@ -116,4 +118,6 @@ class Util(object):
             
         if not is_ok:
             raise SaklientException("argument_type_mismatch", "Argument type mismatch (expected "+type_name+", got "+str(type(value))+")")
+
+
 

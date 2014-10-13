@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 from ...errors.saklientexception import SaklientException
 from ..client import Client
 from .resource import Resource
@@ -509,4 +511,3 @@ class Disk(Resource):
         if len(missing) > 0:
             raise SaklientException("required_field", "Required fields must be set before the Disk creation: " + ", ".join(missing))
         return ret
-    

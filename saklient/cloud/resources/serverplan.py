@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 from ..client import Client
 from .resource import Resource
 from ...util import Util
@@ -176,4 +178,3 @@ class ServerPlan(Resource):
         if withClean or self.n_service_class:
             Util.set_by_path(ret, "ServiceClass", self.m_service_class)
         return ret
-    

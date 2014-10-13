@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 from ..client import Client
 from .resource import Resource
 from ..enums.estorageclass import EStorageClass
@@ -128,4 +130,3 @@ class DiskPlan(Resource):
         if withClean or self.n_storage_class:
             Util.set_by_path(ret, "StorageClass", self.m_storage_class)
         return ret
-    

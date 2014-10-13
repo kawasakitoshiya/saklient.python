@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 
+import six
+str = six.text_type
 from ...errors.saklientexception import SaklientException
 from ..client import Client
 from .appliance import Appliance
