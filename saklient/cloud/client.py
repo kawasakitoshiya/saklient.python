@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import urllib.request, urllib.parse
-from urllib.error import URLError, HTTPError
+from six.moves import urllib
+from six.moves.urllib.error import URLError, HTTPError
 import json, re, base64
+import contextlib
 from ..errors.exceptionfactory import ExceptionFactory
 
 class Client(object):
@@ -75,7 +76,7 @@ class Client(object):
         res = ''
         try:
             req = urllib.request.Request(path, params_json, headers)
-            with urllib.request.urlopen(req) as page:
+            with contextlib.closing(urllib.request.urlopen(req)) as page:
                 for line in page.readlines():
                     res += line.decode('utf-8')
         except HTTPError as ex:
