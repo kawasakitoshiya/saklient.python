@@ -17,6 +17,7 @@ setup(
         'saklient.errors'
     ],
     install_requires=[
+        'six',
         'python-dateutil'
     ],
     classifiers = [
