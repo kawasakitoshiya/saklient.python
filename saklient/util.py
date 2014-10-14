@@ -105,7 +105,9 @@ class Util(object):
             clazz = type(value)
             if (type_name == "function"):
                 is_ok = isinstance(value, types.FunctionType)
-            elif (type_name in {"str", "float", "int", "bool", "dict", "list"}):
+            elif type_name == "str":
+                is_ok = isinstance(value, six.text_type) or isinstance(value, six.string_types)
+            elif (type_name in {"float", "int", "bool", "dict", "list"}):
                 is_ok = type(value).__name__ == type_name
             else:
                 p = type_name.split(".")
