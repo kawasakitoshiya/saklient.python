@@ -75,7 +75,14 @@ class Iface(Resource):
     def connect_to_shared_segment(self):
         self._client.request("PUT", self._api_path() + "/" + Util.url_encode(self._id()) + "/to/switch/shared")
         return self.reload()
-    
+
+    ## swytchに接続します。
+    # 
+    # @return {saklient.cloud.resources.iface.Iface} this
+    def connect_to(self, swytch):
+        self._client.request("PUT", self._api_path() + "/" + Util.url_encode(self._id()) + "/to/switch/" + Util.url_encode(swytch._id()))
+        return self.reload()
+        
     # (instance field) n_id = False
     
     ## (This method is generated in Translator_default#buildImpl)
